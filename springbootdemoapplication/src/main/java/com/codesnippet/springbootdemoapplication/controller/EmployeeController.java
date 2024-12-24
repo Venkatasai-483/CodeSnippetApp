@@ -23,7 +23,4 @@ public class EmployeeController {
         return new ResponseEntity<>(employeeService.getEmployee(id), HttpStatus.ACCEPTED);
     }
 
-    public void something(){
-        System.out.println("sai");
-    }
 }
