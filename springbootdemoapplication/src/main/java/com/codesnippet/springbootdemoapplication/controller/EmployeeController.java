@@ -20,11 +20,8 @@ public class EmployeeController {
 
     @GetMapping("/getEmployee/{id}")
     public ResponseEntity<String> getEmployee(@PathVariable Integer id){
-        return new ResponseEntity<>(employeeService.getEmployee(id), HttpStatus.ACCEPTED);
-    }
-
-    public void something(){
-        System.out.println("Sai");
+        String emp = employeeService.getEmployee(id);
+        return ResponseEntity.ok(emp);
     }
 
 }
