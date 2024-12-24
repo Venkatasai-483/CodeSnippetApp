@@ -1,5 +1,6 @@
 package com.codesnippet.springbootdemoapplication.controller;
 
+import com.codesnippet.springbootdemoapplication.dto.EmployeeDTO;
 import com.codesnippet.springbootdemoapplication.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -19,9 +20,9 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     @GetMapping("/getEmployee/{id}")
-    public ResponseEntity<String> getEmployee(@PathVariable Integer id){
-        String emp = employeeService.getEmployee(id);
-        return ResponseEntity.ok(emp);
+    public ResponseEntity<EmployeeDTO> getEmployee(@PathVariable Integer id){
+        EmployeeDTO employee = employeeService.getEmployee(id);
+        return ResponseEntity.ok(employee);
     }
 
 }

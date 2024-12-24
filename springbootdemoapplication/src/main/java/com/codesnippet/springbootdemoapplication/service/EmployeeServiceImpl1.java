@@ -1,5 +1,7 @@
 package com.codesnippet.springbootdemoapplication.service;
 
+import com.codesnippet.springbootdemoapplication.dto.EmployeeDTO;
+import com.codesnippet.springbootdemoapplication.entity.Employee;
 import com.codesnippet.springbootdemoapplication.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
@@ -13,7 +15,9 @@ public class EmployeeServiceImpl1 implements EmployeeService{
     private EmployeeRepository employeeRepository;
 
     @Override
-    public String getEmployee(Integer id) {
-        return employeeRepository.getEmployee(id)+" Impl1";
+    public EmployeeDTO getEmployee(Integer id) {
+        Employee employee = employeeRepository.getEmployee(id);
+        EmployeeDTO empDTO = new EmployeeDTO();
+        return empDTO.EmployeeMapper(employee);
     }
 }

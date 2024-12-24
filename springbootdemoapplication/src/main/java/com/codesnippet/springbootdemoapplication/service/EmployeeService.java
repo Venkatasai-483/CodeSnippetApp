@@ -1,5 +1,7 @@
 package com.codesnippet.springbootdemoapplication.service;
 
+import com.codesnippet.springbootdemoapplication.dto.EmployeeDTO;
+
 public interface EmployeeService {
-    String getEmployee(Integer id);
+    EmployeeDTO getEmployee(Integer id);
 }
