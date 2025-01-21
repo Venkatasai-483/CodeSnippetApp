@@ -3,6 +3,7 @@ package com.codesnippet.springbootdemoapplication.dto;
 import com.codesnippet.springbootdemoapplication.entity.Employee;
 import lombok.Data;
 
+@Data
 public class EmployeeDTO {
     private String name;
     private String dept;
