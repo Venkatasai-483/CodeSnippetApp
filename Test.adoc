@@ -1,2 +1,8 @@
+Multithreading:
 
-Sai
+Java Process: A process is an instance of a running program created by the OS.
+
+In Java, the process is created by the Operating System when the ‘java’ command is executed.
+The JVM runs inside that process, and only then the JVM creates multiple threads to execute your program.
+
+Who creates the process in Java?
