@@ -23,6 +23,7 @@ public class EmployeeController {
     @GetMapping("/getEmployee/{id}")
     public ResponseEntity<EmployeeDTO> getEmployee(@PathVariable Integer id){
         EmployeeDTO employee = employeeService.getEmployee(id);
+        System.out.println(employee);
         return ResponseEntity.ok(employee);
     }
 
